@@ -30,6 +30,21 @@ public class User_Registration
         }
 
     }
+
+    public void Mobile_Number_Format(String mobileNumber)
+    {
+        String regex="^[a-zA-Z0-9]{3,}+[@][a-zA-Z0-9]{3,}+[.][a-zA-Z]{3,}$";
+        boolean pattern = mobileNumber.matches(regex);
+        if (pattern)
+        {
+            System.out.println("Mobile Number Pattern is valid");
+        }
+        else
+        {
+            System.out.println("Mobile Number Pattern is Invalid");
+        }
+
+    }
     public static void main(String[] args)
     {
         System.out.println("Enter First Name : ");
@@ -43,5 +58,8 @@ public class User_Registration
         System.out.println("Enter Last Validate Email : ");
         String Email=sc.next();
         user.Validate_The_Email(Email);
+        System.out.println("Enter The Mobile Number Format : ");
+        String mobileNumber=sc.next();
+        user.Mobile_Number_Format(mobileNumber);
     }
 }
