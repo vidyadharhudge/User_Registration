@@ -8,15 +8,25 @@ public class User_Registration
 {
     public void Validate_The_Name(String name)
     {
-        String regex ="^[A-Z][a-z]{3,}$";
+        String regex = "^[A-Z][a-z]{3,}$";
+        boolean pattern = name.matches(regex);
+        if (pattern) {
+            System.out.println("Nmae is valid");
+        } else {
+            System.out.println("Name Is Invalid");
+        }
+    }
+    public void Validate_The_Email(String name)
+    {
+        String regex="^[a-zA-Z0-9]{3,}+[@][a-zA-Z0-9]{3,}+[.][a-zA-Z]{3,}$";
         boolean pattern = name.matches(regex);
         if (pattern)
         {
-            System.out.println("Nmae is valid");
+            System.out.println("Email is valid");
         }
         else
         {
-            System.out.println("Name Is Invalid");
+            System.out.println("Email Is Invalid");
         }
 
     }
@@ -30,5 +40,8 @@ public class User_Registration
         System.out.println("Enter Last Name : ");
         String lastName=sc.next();
         user.Validate_The_Name(lastName);
+        System.out.println("Enter Last Validate Email : ");
+        String Email=sc.next();
+        user.Validate_The_Email(Email);
     }
 }
