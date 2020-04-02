@@ -64,11 +64,11 @@ public class User_Registration
         boolean pattern = name.matches(regex);
         if (pattern)
         {
-            System.out.println("password is Valid");
+            System.out.println("password is Valid For Both Cases 6 and 7");
         }
         else
         {
-            System.out.println("password Is Invalid");
+            System.out.println("password Is Invalid For Both Cases 6 and 7");
         }
 
     }
@@ -99,6 +99,7 @@ public class User_Registration
         System.out.println("Enter Password : ");
         String Password=sc.next();
         user.Upper_Case_Password (Password);
+
 
 
 
