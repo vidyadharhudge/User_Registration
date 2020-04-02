@@ -32,7 +32,7 @@ public class User_Registration
     }
     public void Validate_The_Number(String name)
     {
-        String regex="^[0-9]{2}[ ][0-9]{10}$";
+        String regex="^[0-9]{2} [6-9]{1}[0-9]{9}$";
         boolean pattern = name.matches(regex);
         if (pattern)
         {
@@ -50,11 +50,11 @@ public class User_Registration
         boolean pattern = name.matches(regex);
         if (pattern)
         {
-            System.out.println("password is Valid");
+            System.out.println("password is Valid For Use Case 5");
         }
         else
         {
-            System.out.println("password Is Invalid");
+            System.out.println("password Is Invalid For Use Case 5");
         }
 
     }
@@ -69,6 +69,22 @@ public class User_Registration
         else
         {
             System.out.println("password Is Invalid For Both Cases 6 and 7");
+        }
+
+    }
+
+    public void Special_Character_Password(String name)
+    {
+        String regex="^[A-Z]{1}[a-z]{4}[\\!\\@\\#\\%\\$\\&\\*]{1}[0-9]{4}";
+
+        boolean pattern = name.matches(regex);
+        if (pattern)
+        {
+            System.out.println("password is Valid ");
+        }
+        else
+        {
+            System.out.println("password Is Invalid ");
         }
 
     }
@@ -99,6 +115,10 @@ public class User_Registration
         System.out.println("Enter Password : ");
         String Password=sc.next();
         user.Upper_Case_Password (Password);
+
+        System.out.println("Enter Password : ");
+        String passwords=sc.next();
+        user.Special_Character_Password (passwords);
 
 
 
