@@ -11,7 +11,7 @@ public class User_Registration
         String regex = "^[A-Z][a-z]{3,}$";
         boolean pattern = name.matches(regex);
         if (pattern) {
-            System.out.println("Nmae is valid");
+            System.out.println("Name is Valid");
         } else {
             System.out.println("Name Is Invalid");
         }
@@ -22,7 +22,7 @@ public class User_Registration
         boolean pattern = name.matches(regex);
         if (pattern)
         {
-            System.out.println("Email is valid");
+            System.out.println("Email is Valid");
         }
         else
         {
@@ -30,21 +30,38 @@ public class User_Registration
         }
 
     }
-
-    public void Mobile_Number_Format(String mobileNumber)
+    public void Validate_The_Number(String name)
     {
-        String regex="^[a-zA-Z0-9]{3,}+[@][a-zA-Z0-9]{3,}+[.][a-zA-Z]{3,}$";
-        boolean pattern = mobileNumber.matches(regex);
+        String regex="^[0-9]{2}[ ][0-9]{10}$";
+        boolean pattern = name.matches(regex);
         if (pattern)
         {
-            System.out.println("Mobile Number Pattern is valid");
+            System.out.println("Number is Valid");
         }
         else
         {
-            System.out.println("Mobile Number Pattern is Invalid");
+            System.out.println("Number Is Invalid");
         }
 
     }
+    public void Validate_The_Password(String name)
+    {
+        String regex="^[A-Z]{1}[a-z]{5}[0-9]{3}$";
+        boolean pattern = name.matches(regex);
+        if (pattern)
+        {
+            System.out.println("password is Valid");
+        }
+        else
+        {
+            System.out.println("password Is Invalid");
+        }
+
+    }
+
+
+
+
     public static void main(String[] args)
     {
         System.out.println("Enter First Name : ");
@@ -58,8 +75,15 @@ public class User_Registration
         System.out.println("Enter Last Validate Email : ");
         String Email=sc.next();
         user.Validate_The_Email(Email);
-        System.out.println("Enter The Mobile Number Format : ");
+        System.out.println("Enter Mobile Number : ");
         String mobileNumber=sc.next();
-        user.Mobile_Number_Format(mobileNumber);
+        user.Validate_The_Number(mobileNumber);
+        System.out.println("Enter Password : ");
+        String password=sc.next();
+        user.Validate_The_Password (password);
+
+
+
+
     }
 }
