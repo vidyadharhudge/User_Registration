@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class User_Registration
 {
-    public void validFirstName(String name)
+    public void Validate_The_Name(String name)
     {
         String regex ="^[A-Z][a-z]{3,}$";
         boolean pattern = name.matches(regex);
@@ -22,10 +22,13 @@ public class User_Registration
     }
     public static void main(String[] args)
     {
-        System.out.println("Enter Name : ");
+        System.out.println("Enter First Name : ");
         Scanner sc=new Scanner(System.in);
-        String name=sc.next();
+        String firstName=sc.next();
         User_Registration user = new User_Registration();
-        user.validFirstName(name);
+        user.Validate_The_Name(firstName);
+        System.out.println("Enter Last Name : ");
+        String lastName=sc.next();
+        user.Validate_The_Name(lastName);
     }
 }
