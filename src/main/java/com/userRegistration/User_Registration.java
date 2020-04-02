@@ -58,6 +58,21 @@ public class User_Registration
         }
 
     }
+    public void Upper_Case_Password(String name)
+    {
+        String regex="^[A-Z]{1}[a-z]{5}[0-9]{3}$";
+        boolean pattern = name.matches(regex);
+        if (pattern)
+        {
+            System.out.println("password is Valid");
+        }
+        else
+        {
+            System.out.println("password Is Invalid");
+        }
+
+    }
+
 
 
 
@@ -81,6 +96,9 @@ public class User_Registration
         System.out.println("Enter Password : ");
         String password=sc.next();
         user.Validate_The_Password (password);
+        System.out.println("Enter Password : ");
+        String Password=sc.next();
+        user.Upper_Case_Password (Password);
 
 
 
