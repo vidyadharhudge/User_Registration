@@ -1,11 +1,8 @@
 package com.userRegistration;
 
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
-
-import java.util.Scanner;
-
 public class User_Registration
 {
+    //function for the validating the first name and last name
     public void Validate_The_Name(String name)
     {
         String regex = "^[A-Z][a-z]{3,}$";
@@ -19,6 +16,7 @@ public class User_Registration
             System.out.println("Name Is Invalid");
         }
     }
+    //function for validating the email
     public void Validate_The_Email(String name)
     {
         String emailPattern1 = "^[a-zA-Z0-9]{3,}+[@]{1}$";
@@ -36,6 +34,7 @@ public class User_Registration
         }
 
     }
+    //function for the validating the number
     public void Validate_The_Number(String name)
     {
         String regex="^[0-9]{2}[0-9]{10}$";
@@ -50,6 +49,7 @@ public class User_Registration
         }
 
     }
+    //function for validating the password
     public void Validate_The_Password(String name1)
     {
         String regex="^[A-Z]{1}[a-z]{5}[0-9]{3}$";
@@ -64,6 +64,7 @@ public class User_Registration
         }
 
     }
+    //function for validating password for upper and lower case letter
     public void Upper_Case_Password(String name)
     {
         String regex="^[A-Z]{1}[a-z]{5}[0-9]{3}$";
@@ -79,6 +80,7 @@ public class User_Registration
 
     }
 
+    //function for containing the exactly one special character
     public void Special_Character_Password(String name)
     {
         String regex="^[A-Z]{1}[a-z]{4}[\\!\\@\\#\\%\\$\\&\\*]{1}[0-9]{4}";
@@ -92,43 +94,6 @@ public class User_Registration
         {
             System.out.println("password Is Invalid ");
         }
-
-    }
-    public static void main(String[] args)
-    {
-        System.out.println("Enter First Name : ");
-        Scanner sc=new Scanner(System.in);
-        String firstName=sc.next();
-        User_Registration user = new User_Registration();
-        user.Validate_The_Name(firstName);
-
-        System.out.println("Enter Last Name : ");
-        String lastName=sc.next();
-        user.Validate_The_Name(lastName);
-
-        System.out.println("Enter Last Validate Email : ");
-        String Email=sc.next();
-        user.Validate_The_Email(Email);
-
-        System.out.println("Enter Mobile Number : ");
-        String mobileNumber=sc.next();
-        user.Validate_The_Number(mobileNumber);
-
-        System.out.println("Enter Password : ");
-        String password1=sc.next();
-        user.Validate_The_Password (password1);
-
-        System.out.println("Enter Password : ");
-        String Password=sc.next();
-        user.Upper_Case_Password (Password);
-
-        System.out.println("Enter Password : ");
-        String passwords=sc.next();
-        user.Special_Character_Password (passwords);
-
-
-
-
 
     }
 }
